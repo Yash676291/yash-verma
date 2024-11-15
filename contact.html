@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="projectCSS.css">
+    <style>
+        /* Contact Us Page Styles */
+
+.contact-us {
+    background-color: var(--light-gray);
+    padding: 5rem 2rem;
+    min-height: 100vh;
+    color: var(--dark-gray);
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-heading {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: var(--dark-blue);
+    font-family: 'Allison', cursive;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-info {
+    flex: 1;
+    background: var(--light-peach);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.contact-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.contact-info span {
+    color: var(--dark-blue);
+}
+
+.contact-form {
+    flex: 2;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: var(--dark-gray);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--dark-gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--light-gray);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--dark-blue);
+    outline: none;
+}
+
+.contact-form button {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: var(--light-peach);
+    color: var(--dark-blue);
+}
+
+@media screen and (max-width: 768px) {
+    .contact-details {
+        flex-direction: column;
+    }
+    
+    .contact-info {
+        margin-bottom: 2rem;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html">Stilo.</a></div>
+        <ul class="navlinks" id="navlinks">
+            <li>
+                <a href="index.html" class="active">Home</a>
+            </li>
+            <li>
+                <a href="product.html">Product</a>
+            </li>
+            <li>
+                <a href="Arivals.html">Arivals</a>
+            </li>
+            <li>
+                <a href="Offers.html">Offers</a>
+            </li>
+            <li>
+                <a href="Collection.html">Collection</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="contact-us">
+        <div class="contact-container">
+            <h2 class="contact-heading">Get in Touch</h2>
+            <div class="contact-details">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Phone:</strong> <span>6969696699</span></p>
+                    <p><strong>Email:</strong> <span>69_69oops@gmail.com</span></p>
+                </div>
+                <form action="#" method="POST" class="contact-form">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+
+                    <button type="submit" class="primary-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

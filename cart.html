@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Stilo</title>
+    <link rel="stylesheet" href="projectCSS.css">
+    <style>
+        /* ---Cart Section--- */
+.cart-section {
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.cart-container {
+    background-color: var(--white);
+    width: 80%;
+    max-width: 1200px;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light-gray);
+    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-image img {
+    width: 8rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex: 1;
+    padding-left: 1.5rem;
+}
+
+.cart-product-name {
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.cart-product-price {
+    font-size: 1.3rem;
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+}
+
+.quantity-input {
+    width: 4rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid var(--dark-gray);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.cart-item-total {
+    text-align: right;
+}
+
+.cart-item-total p {
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+.cart-summary {
+    margin-top: 3rem;
+    background: var(--light-peach);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+}
+
+.cart-summary p {
+    margin: 0;
+}
+
+.cart-summary strong {
+    font-size: 1.4rem;
+    color: var(--dark-blue);
+}
+
+.cart-checkout {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.primary-btn {
+    background: var(--dark-blue);
+    color: var(--white);
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+    background: var(--light-peach);
+}
+
+/* ---Footer Section--- */
+footer {
+    background: var(--light-black);
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.footer-txt {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ---Responsive Design--- */
+@media screen and (max-width: 600px) {
+    .cart-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item-image img {
+        width: 6rem;
+    }
+
+    .cart-item-details {
+        padding-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .quantity-input {
+        width: 3rem;
+    }
+
+    .cart-summary {
+        padding: 1rem;
+    }
+
+    .summary-item {
+        font-size: 1rem;
+    }
+
+    .cart-checkout .primary-btn {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    footer {
+        height: 8vh;
+    }
+
+    .footer-txt {
+        font-size: 1rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- ---Header Section (same as homepage)--- -->
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Stilo.</a></div>
+            <ul class="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="Arivals.html">Arrivals</a></li>
+                <li><a href="Offers.html">Offers</a></li>
+                <li><a href="Collection.html">Collection</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ---Cart Section--- -->
+    <section class="cart-section">
+        <div class="cart-container">
+            <h2>Your Shopping Cart</h2>
+
+            <!-- Cart Item -->
+            <div class="cart-item">
+                <div class="cart-item-image">
+                    <img src="omega blue.png" alt="Blue Omega SA" class="cart-image">
+                </div>
+                <div class="cart-item-details">
+                    <h3 class="cart-product-name">Blue Omega SA</h3>
+                    <p class="cart-product-price">$3,879</p>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" class="quantity-input">
+                </div>
+                <div class="cart-item-total">
+                    <p>Total: $<span id="item-total">3879</span></p>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <div class="summary-item">
+                    <p>Subtotal</p>
+                    <p id="cart-subtotal">$3,879</p>
+                </div>
+                <div class="summary-item">
+                    <p>Tax (8%)</p>
+                    <p id="cart-tax">$310.32</p>
+                </div>
+                <div class="summary-item">
+                    <p><strong>Total</strong></p>
+                    <p id="cart-total"><strong>$4,189.32</strong></p>
+                </div>
+            </div>
+
+            <!-- Checkout Button -->
+            <div class="cart-checkout">
+                <button class="primary-btn" onclick="checkout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p class="footer-txt">Designed by yash verma</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
